@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://grgpratik:plih1230@cluster0-nhabf.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://grgpratik:plih1230@cluster0-nhabf.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
