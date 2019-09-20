@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://grgpratik:plih1230@cluster0-nhabf.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "312f0dbb69559afd2e4e",
+  "githubSecret": "d6c062df4852df9619036c55c3a3065b56675bdc"
 }

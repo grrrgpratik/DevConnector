@@ -9,8 +9,7 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   website: {
-    type: String,
-    required: true
+    type: String
   },
   status: {
     type: String,
