@@ -1,5 +1,4 @@
 import { SET_ALERT, REMOVE_ALERT } from "./types";
-import { dispatch } from "rxjs/internal/observable/range";
 import uuid from "uuid";
 
 export const setAlert = (msg, alertType, timeout = 5000) => dispatch => {
