@@ -10,7 +10,7 @@ import {
 
 const initialState = {
   token: localStorage.getItem("token"),
-  isAuthenticated: null,
+  isAuthenticated: false,
   loading: false,
   user: null
 };
@@ -22,6 +22,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         isAuthenticated: true,
+        loading: false,
         user: payload
       };
     case REGISTER_SUCCESS:
@@ -41,7 +42,7 @@ export default function(state = initialState, action) {
       localStorage.removeItem("token");
       return {
         ...state,
-        ...payload,
+        token: null,
         isAuthenticated: false,
         loading: false
       };
