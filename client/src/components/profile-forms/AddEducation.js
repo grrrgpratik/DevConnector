@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addEducation } from "../../actions/profile";
-const AddEducation = props => {
+const AddEducation = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
     school: "",
     degree: "",
@@ -34,7 +34,13 @@ const AddEducation = props => {
         <i class="fas fa-code-branch"></i> Add any school you have attended
       </p>
       <small>* = required field</small>
-      <form class="form">
+      <form
+        class="form"
+        onSubmit={e => {
+          e.preventDefault();
+          addEducation(formData, history);
+        }}
+      >
         <div class="form-group">
           <input
             type="text"
@@ -85,7 +91,7 @@ const AddEducation = props => {
                 toggleDisabled(!toDateDisabled);
               }}
             />{" "}
-            Current Job
+            Current Study
           </p>
         </div>
         <div class="form-group">
